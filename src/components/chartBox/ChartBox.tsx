@@ -6,18 +6,18 @@ type Props = {
   color: string;
   icon: string;
   title: string;
-  datakey: string;
+  dataKey: string;
   number: number | string;
   percentage: number;
   chartData: object[]
 }
 
-const Chartbox = (props) => {
+const ChartBox = (props: Props) => {
   return (
     <div className="chartBox">
       <div className="boxInfo">
         <div className="title">
-          <img src={props.img} alt="" />
+          <img src={props.icon} alt="" />
           <span>{props.title}</span>
         </div>
         <h1>{props.number}</h1>
@@ -34,7 +34,7 @@ const Chartbox = (props) => {
               />
               <Line
                 type="monotone"
-                dataKey={props.datakey}
+                dataKey={props.dataKey}
                 stroke={props.color}
                 strokeWidth={2}
                 dot={false}
@@ -53,4 +53,4 @@ const Chartbox = (props) => {
   );
 };
 
-export default Chartbox;
+export default ChartBox;
