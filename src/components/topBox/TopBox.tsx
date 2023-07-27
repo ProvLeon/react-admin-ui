@@ -23,4 +23,4 @@ const TopBox = () => {
 )
 }
 
-export default TopBox
+export default TopBox;
